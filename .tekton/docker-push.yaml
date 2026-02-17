@@ -6,7 +6,7 @@ metadata:
     pipelinesascode.tekton.dev/on-event: "[push]"
     pipelinesascode.tekton.dev/on-target-branch: "[main]"
     pipelinesascode.tekton.dev/max-keep-runs: "2"
-    pipelinesascode.tekton.dev/pipeline: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/pipelines/docker-build-rhtap.yaml"
+    pipelinesascode.tekton.dev/pipeline: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/pipelines/docker-build-tssc.yaml"
     pipelinesascode.tekton.dev/task-0: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/init.yaml"
     pipelinesascode.tekton.dev/task-1: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/git-clone.yaml"
     pipelinesascode.tekton.dev/task-2: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/buildah-rhtap.yaml"
@@ -16,7 +16,7 @@ metadata:
     pipelinesascode.tekton.dev/task-6: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/update-deployment.yaml"
     pipelinesascode.tekton.dev/task-7: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/show-sbom-rhdh.yaml"
     pipelinesascode.tekton.dev/task-8: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/summary.yaml"
-    pipelinesascode.tekton.dev/task-9: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/build-workload.yaml"
+    pipelinesascode.tekton.dev/task-9: "https://raw.githubusercontent.com/dperaza4dustbit/tssc-dev-multi-ci/remove_cosign_warn/samples/tekton/pac/tasks/build-workload.yaml"
     pipelinesascode.tekton.dev/task-10: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/deploy-workload.yaml"
     pipelinesascode.tekton.dev/task-11: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/scan-workload.yaml"
     pipelinesascode.tekton.dev/task-12: "https://raw.githubusercontent.com/redhat-appstudio/tssc-dev-multi-ci/main/samples/tekton/pac/tasks/summarize-workload.yaml"
@@ -47,7 +47,7 @@ spec:
     - name: gitops-auth-secret-name
       value: "gitops-auth-secret"
   pipelineRef:
-    name: docker-build-rhtap
+    name: docker-build-tssc
   workspaces:
     - name: gitops-auth
       secret:
