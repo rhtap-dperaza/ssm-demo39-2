@@ -1,4 +1,4 @@
-aapiVersion: tekton.dev/v1
+apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
   name: "davp-demo39-2-on-push"
